@@ -385,14 +385,14 @@ opkg install v2ray-core
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
     <div class="panel-body">
-        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
+        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 使用 TAP 驱动时 Windows 弹出网络变更提示，该如何处理？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 如何通过策略组优化科学上网？</h5></div>
     <div class="panel-body">
-        这是正常现象，TAP 虚拟网卡会改变系统网络状态。建议在首次启用时允许驱动安装并授予网络权限，若频繁弹窗可在网络设置中调整网络识别类型或将 TAP 设为非计量连接。<hr />    </div>
+        PassWall2 结合策略组和节点延迟检测功能，可自动选择最佳节点处理网页、视频和游戏流量。无需手动干预，保证访问速度和网络稳定性，提高整体体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 自动切换节点如何提高网页访问速度？</h5></div>
@@ -405,19 +405,19 @@ opkg install v2ray-core
         可在 Clash 的 rules 中优先设置域名直连规则，并在系统 hosts 中添加常用站点的固定解析以加速 DNS 解析。注意 hosts 优先级高于 DNS，因此修改 hosts 需谨慎以避免与真实解析冲突。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
-    <div class="panel-body">
-        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 如何通过域名规则实现精准分流？</h5></div>
     <div class="panel-body">
         Sing-box 支持根据域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组，可实现自动切换最优节点，优化访问速度和网络稳定性，提高整体使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何通过策略组优化科学上网？</h5></div>
+    <div class="panel-heading"><h5>QuantumultX 的重写规则可实现哪些功能？</h5></div>
     <div class="panel-body">
-        PassWall2 结合策略组和节点延迟检测功能，可自动选择最佳节点处理网页、视频和游戏流量。无需手动干预，保证访问速度和网络稳定性，提高整体体验。<hr />    </div>
+        QuantumultX 的重写规则支持请求头修改、响应内容修改、广告屏蔽及自动跳转。结合脚本可实现自动签到、流量统计和定制化网络访问，极大增强客户端灵活性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
+    <div class="panel-body">
+        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
@@ -425,14 +425,14 @@ opkg install v2ray-core
         在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 是否支持 UDP 加速？</h5></div>
+    <div class="panel-heading"><h5>Netch 使用 TAP 驱动时 Windows 弹出网络变更提示，该如何处理？</h5></div>
     <div class="panel-body">
-        支持。Hysteria2 通过 QUIC 协议原生支持 UDP 加速，对实时性要求高的应用（如游戏或语音通话）表现极佳，能显著降低延迟并提高连接稳定性。<hr />    </div>
+        这是正常现象，TAP 虚拟网卡会改变系统网络状态。建议在首次启用时允许驱动安装并授予网络权限，若频繁弹窗可在网络设置中调整网络识别类型或将 TAP 设为非计量连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 的重写规则可实现哪些功能？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 是否支持 UDP 加速？</h5></div>
     <div class="panel-body">
-        QuantumultX 的重写规则支持请求头修改、响应内容修改、广告屏蔽及自动跳转。结合脚本可实现自动签到、流量统计和定制化网络访问，极大增强客户端灵活性。    </div>
+        支持。Hysteria2 通过 QUIC 协议原生支持 UDP 加速，对实时性要求高的应用（如游戏或语音通话）表现极佳，能显著降低延迟并提高连接稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -480,16 +480,16 @@ opkg install v2ray-core
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-31.htm" title="VPN Clash V2ray - 8月31日22.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月31日22.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-10-clash-node.htm" title="VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-free-clash.htm" title="VPN Clash V2ray - 8月20日19.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月20日19.2M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-21.htm" title="VPN Clash V2ray - 9月21日22.3M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月21日22.3M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-28-clash-node.htm" title="VPN Clash V2ray - 8月28日22.4M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月28日22.4M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-v2ray-ss-ssr.htm" title="VPN Clash V2ray - 8月14日19.6M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月14日19.6M/S|免费Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-clash.htm" title="VPN Clash V2ray - 8月10日19.7M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月10日19.7M/S|免费SSR节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-clash-v2ray-ss-ssr.htm" title="VPN Clash V2ray - 8月6日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月6日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-26-clash-v2ray-ss-ssr.htm" title="VPN Clash V2ray - 8月26日18.6M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月26日18.6M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-8-7.htm" title="VPN Clash V2ray - 8月7日19.3M/S|免费Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月7日19.3M/S|免费Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-7.htm" title="VPN Clash V2ray - 9月7日19.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月7日19.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-v2ray.htm" title="VPN Clash V2ray - 8月16日18M/S|免费Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月16日18M/S|免费Clash节点/Trojan节点/SSR节点/V2ray节点/Singbox节点/Shadowrocket节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-29.htm" title="VPN Clash V2ray - 8月29日21.5M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月29日21.5M/S|免费Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-19.htm" title="VPN Clash V2ray - 9月19日21.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月19日21.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-8-13.htm" title="VPN Clash V2ray - 8月13日20.5M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月13日20.5M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-clash-node.htm" title="VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-clash.htm" title="VPN Clash V2ray - 8月12日20.9M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月12日20.9M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-25.htm" title="VPN Clash V2ray - 8月25日20M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月25日20M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-clash-node-daily-updates.htm" title="VPN Clash V2ray - 8月8日18.1M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 8月8日18.1M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -501,7 +501,7 @@ opkg install v2ray-core
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
