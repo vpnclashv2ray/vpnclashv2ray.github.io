@@ -394,34 +394,9 @@ FINAL,PROXY
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
+    <div class="panel-heading"><h5>Hiddify Next 如何管理不同用户的带宽？</h5></div>
     <div class="panel-body">
-        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
-    <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
-    <div class="panel-body">
-        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何实现域名白名单策略？</h5></div>
-    <div class="panel-body">
-        Clash 可以通过策略组结合规则文件，将指定域名或网站加入白名单，实现直连而不经过代理节点。这样可以保证国内访问速度，同时节省节点带宽资源，提高整体网络效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 是否支持自动测速节点？</h5></div>
-    <div class="panel-body">
-        支持。Matsuri 可以自动对订阅中的节点进行延迟和速度测试，并按测试结果排序，用户可快速选择最佳节点，提升整体网络使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 的主要用途是什么？</h5></div>
-    <div class="panel-body">
-        Hiddify Next 是 Hiddify 系列的新版本，集成了 VLESS、Trojan、Reality 等新型协议支持。它为用户提供一站式代理配置与分享功能，适合初学者快速上手使用。<hr />    </div>
+        管理员可以为每个用户设置独立带宽限制和流量配额。超出配额时可自动阻断或降速，确保服务器资源合理分配，避免单用户占用过多带宽，保障整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 使用 AEAD 加密后连接性能如何？</h5></div>
@@ -429,19 +404,44 @@ FINAL,PROXY
         AEAD 加密在保证数据安全的同时，性能开销较低，抗重放攻击能力强。高封锁环境下更稳定，同时减少流量特征泄露，适合长时间和高安全性需求的网络连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
+    <div class="panel-body">
+        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 的主要用途是什么？</h5></div>
+    <div class="panel-body">
+        Hiddify Next 是 Hiddify 系列的新版本，集成了 VLESS、Trojan、Reality 等新型协议支持。它为用户提供一站式代理配置与分享功能，适合初学者快速上手使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 Windows 上用 Wireshark 分析代理流量以排查问题？</h5></div>
     <div class="panel-body">
         使用 Wireshark 抓取对应网卡流量，结合过滤器（例如 host <server_ip> 或 tcp.port==<port>）分析握手与数据包内容。注意 TLS/QUIC 流量为加密内容，仅能通过元信息（时延、丢包）判断异常，不要尝试解密用户隐私。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何管理不同用户的带宽？</h5></div>
+    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
     <div class="panel-body">
-        管理员可以为每个用户设置独立带宽限制和流量配额。超出配额时可自动阻断或降速，确保服务器资源合理分配，避免单用户占用过多带宽，保障整体网络体验。<hr />    </div>
+        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的域名规则如何实现分流？</h5></div>
     <div class="panel-body">
-        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。    </div>
+        Sing-box 支持按域名匹配流量，将不同网站或应用流量分配到指定节点。结合策略组自动切换低延迟节点，可优化访问速度，保证网络稳定性并提高整体体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 是否支持自动测速节点？</h5></div>
+    <div class="panel-body">
+        支持。Matsuri 可以自动对订阅中的节点进行延迟和速度测试，并按测试结果排序，用户可快速选择最佳节点，提升整体网络使用体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何实现域名白名单策略？</h5></div>
+    <div class="panel-body">
+        Clash 可以通过策略组结合规则文件，将指定域名或网站加入白名单，实现直连而不经过代理节点。这样可以保证国内访问速度，同时节省节点带宽资源，提高整体网络效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
+    <div class="panel-body">
+        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -489,16 +489,16 @@ FINAL,PROXY
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-10-3.htm" title="VPN Clash V2ray - 10月3日18.2M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月3日18.2M/S|免费Trojan节点/SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-10-11.htm" title="VPN Clash V2ray - 10月11日19.9M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月11日19.9M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-ssr-subscribe.htm" title="VPN Clash V2ray - 9月12日19.7M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月12日19.7M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-8-clash-node.htm" title="VPN Clash V2ray - 10月8日21.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月8日21.4M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-19.htm" title="VPN Clash V2ray - 9月19日21.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月19日21.7M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-23.htm" title="VPN Clash V2ray - 9月23日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月23日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-7.htm" title="VPN Clash V2ray - 9月7日19.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月7日19.1M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，VPN节点购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-17.htm" title="VPN Clash V2ray - 9月17日22M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月17日22M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-29.htm" title="VPN Clash V2ray - 9月29日21.5M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月29日21.5M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-13.htm" title="VPN Clash V2ray - 9月13日22.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月13日22.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/SSR节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-15.htm" title="VPN Clash V2ray - 9月15日21.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月15日21.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-23.htm" title="VPN Clash V2ray - 9月23日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月23日20.3M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-clash-node.htm" title="VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月10日20.9M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-21.htm" title="VPN Clash V2ray - 9月21日22.3M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月21日22.3M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/SSR节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-ssr-subscribe.htm" title="VPN Clash V2ray - 9月2日22M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 9月2日22M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-1.htm" title="VPN Clash V2ray - 10月1日22.7M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月1日22.7M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-16-free-ssr-subscribe.htm" title="VPN Clash V2ray - 10月16日21.3M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月16日21.3M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-10-21.htm" title="VPN Clash V2ray - 10月21日18.8M/S|免费Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐">VPN Clash V2ray - 10月21日18.8M/S|免费Shadowrocket节点/SSR节点/Trojan节点/Clash节点/Singbox节点/V2ray节点节点推荐，VPN节点购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -510,7 +510,7 @@ FINAL,PROXY
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
